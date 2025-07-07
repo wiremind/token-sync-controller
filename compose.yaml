@@ -1,0 +1,10 @@
+services:
+  token-sync-controller:
+    image: ghcr.io/wiremind/token-sync-controller
+    build:
+      context: .
+      dockerfile: Containerfile
+    container_name: token-sync-controller
+    ports:
+      - "8080:8080"
+    env_file: "token-sync-controller.env"
